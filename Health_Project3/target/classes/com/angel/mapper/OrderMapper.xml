@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.angel.mapper.OrderMapper">
+	<select id="getListToOrder" resultType="com.angel.model.OrderPageItemDTO">
+
+		SELECT pno,name,price,discount FROM product_tbl
+		where pno=#{pno}
+
+
+
+	</select>
+	
+	<insert id="insertItems">
+	
+		insert into orderitem_tbl values(orderitem_seq.nextval
+		,#{orderId},#{pno},#{amount},#{product_price},#{product_discount})
+	
+	
+	</insert>
+	
+		<insert id="insertOrder">
+	
+		insert into order_tbl(orderid,membername,memberid,memberaddr1,memberaddr2,memberaddr3,orderstate,deliverycost,usepoint) values(#{orderId},#{memberName},#{memberId},
+		#{memberAddr1},#{memberAddr2},#{memberAddr3},'배송준비',#{deliveryCost},#{usePoint})
+	
+	
+	</insert>
+
+
+
+
+
+</mapper>

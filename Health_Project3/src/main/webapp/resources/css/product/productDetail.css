@@ -1,0 +1,244 @@
+.pull{
+	text-align:center;
+	
+}
+.detail-images{
+	text-align: center;		
+
+}
+.product-img {
+	max-width: 100%;
+	height: auto;
+}
+
+.product-info {
+	margin-top: 30px;
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+#search-bar {
+	width: 400px;
+	margin-top: 10px;
+}
+
+.recommendation {
+	padding: 50px 0;
+	background-color: #f5f5f5;
+}
+
+.recommendation h2 {
+	margin-bottom: 30px;
+	font-size: 32px;
+	text-align: center;
+}
+
+.product {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.product img {
+	display: block;
+	margin: 0 auto 15px;
+	max-width: 100%;
+	height: auto;
+}
+
+.product h3 {
+	margin-bottom: 5px;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.price {
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.number {
+	float: left;
+	width: 50px;
+	font-size: 22px;
+	text-align: center;
+	line-height: 50px;
+	height: 50px;
+	border: 1px solid #000;
+	margin-right: 20px;
+	box-sizing: border-box;
+}
+
+.storeMD .type_A ul {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+
+html[data-mobile='Y'] 
+.ml-product-view-block .storeMD .type_A li {
+	padding: 0px;
+	margin: 0px 0px 20px 0px;
+	list-style: none;
+}
+
+html[data-mobile='Y'] .ml-product-view-block .storeMD .type_A li:after {
+	display: block;
+	content: '';
+	clear: both;
+}
+
+html[data-mobile='Y'] .ml-product-view-block .storeMD .type_A li .number
+	{
+	float: left;
+	width: 50px;
+	font-size: 22px;
+	text-align: center;
+	line-height: 50px;
+	height: 50px;
+	border: 1px solid #000;
+	margin-right: 20px;
+	box-sizing: border-box;
+}
+
+html[data-mobile='Y'] .ml-product-view-block .storeMD .type_A li .info {
+	float: left;
+	width: calc(100% - 80px);
+}
+
+html[data-mobile='Y'] .ml-product-view-block .storeMD .type_A li .txt1 {
+	font-size: 16px;
+	font-weight: bold;
+	padding-top: 5px;
+	margin-bottom: 8px;
+	word-break: keep-all;
+}
+
+html[data-mobile='Y'] .ml-product-view-block .storeMD .type_A li .txt2 {
+	font-size: 15px;
+	line-height: 26px;
+	word-break: keep-all;
+}
+
+html[data-mobile='Y'] .ml-product-view-block .storeMD .alert_A {
+	margin: 50px 0px;
+}
+
+html[data-mobile='Y'] .ml-product-view-block .storeMD .alert_A .txt1 {
+	font-size: 20px;
+	font-weight: bold;
+	padding-left: 10px;
+	border-left: 2px solid #000;
+	margin-bottom: 20px;
+	word-break: keep-all;
+}
+
+html[data-mobile='Y'] .ml-product-view-block .storeMD .alert_A .txt2 {
+	font-size: 14px;
+	line-height: 28px;
+	word-break: keep-all;
+}
+
+html[data-mobile='N'] .ml-product-view-block .storeMD .type_A li .info {
+	float: left;
+	width: calc(100% - 80px);
+}
+
+.storeMD .type_A ul {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+
+html[data-mobile='Y'] .ml-product-view-block .storeMD .type_A li {
+	padding: 0px;
+	margin: 0px 0px 20px 0px;
+	list-style: none;
+}
+
+html[data-mobile='Y'] .ml-product-view-block .storeMD .type_A li:after {
+	display: block;
+	content: '';
+	clear: both;
+}
+
+html[data-mobile='Y'] .ml-product-view-block .storeMD .type_A li .number
+	{
+	float: left;
+	width: 50px;
+	font-size: 22px;
+	text-align: center;
+	line-height: 50px;
+	height: 50px;
+	border: 1px solid #000;
+	margin-right: 20px;
+	box-sizing: border-box;
+}
+
+html[data-mobile='Y'] .ml-product-view-block .storeMD .type_A li .info {
+	float: left;
+	width: calc(100% - 80px);
+}
+
+html[data-mobile='Y'] .ml-product-view-block .storeMD .type_A li .txt1 {
+	font-size: 16px;
+	font-weight: bold;
+	padding-top: 5px;
+	margin-bottom: 8px;
+	word-break: keep-all;
+}
+
+html[data-mobile='Y'] .ml-product-view-block .storeMD .type_A li .txt2 {
+	font-size: 15px;
+	line-height: 26px;
+	word-break: keep-all;
+}
+
+.storeMD .type_A ul {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+
+html[data-mobile='N'] .ml-product-view-block .storeMD .type_A li {
+	padding: 0px;
+	margin: 0px 0px 20px 0px;
+	list-style: none;
+}
+
+html[data-mobile='N'] .ml-product-view-block .storeMD .type_A li:after {
+	display: block;
+	content: '';
+	clear: both;
+}
+
+html[data-mobile='N'] .ml-product-view-block .storeMD .type_A li .number
+	{
+	float: left;
+	width: 50px;
+	font-size: 22px;
+	text-align: center;
+	line-height: 50px;
+	height: 50px;
+	border: 1px solid #000;
+	margin-right: 20px;
+	box-sizing: border-box;
+}
+
+html[data-mobile='N'] .ml-product-view-block .storeMD .type_A li .info {
+	float: left;
+	width: calc(100% - 80px);
+}
+
+.storeMD .type_A li .txt1 {
+	font-size: 16px;
+	font-weight: bold;
+	padding-top: 5px;
+	margin-bottom: 8px;
+	word-break: keep-all;
+}
+
+html[data-mobile='N'] .ml-product-view-block .storeMD .type_A li .txt2 {
+	font-size: 15px;
+	line-height: 26px;
+	word-break: keep-all;
+}

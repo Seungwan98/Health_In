@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.angel.mapper.FoodMapper">
+	<insert id="setDataBase" parameterType="java.util.List">
+	<selectKey resultType="int"  keyProperty="fno" order="BEFORE">
+
+    select nvl(max(fno)+1,0) from food_tbl 
+
+</selectKey>
+	insert into food_tbl(fno,name,totalVolume,kcal,carbohydrate,protein,sugar,natrium,cholesterol,fattyAcid,transFattyAcid)
+	
+		<foreach collection="list" item="vo" separator="UNION ALL" index="index" >
+			
+		
+select #{fno}+#{index},#{vo.name},#{vo.totalVolume},#{vo.kcal},#{vo.carbohydrate},#{vo.protein},#{vo.sugar},#{vo.natrium},#{vo.cholesterol},#{vo.fattyAcid},#{vo.transFattyAcid}
+ from dual
+		</foreach>
+
+	</insert>
+
+	<delete id="deleteAll">
+		delete from food_tbl
+	</delete>
+
+
+
+</mapper>

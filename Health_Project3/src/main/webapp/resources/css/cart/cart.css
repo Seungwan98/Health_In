@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+#wrap {
+	min-height: 100%;
+	position: relative;
+	padding-bottom: 200px;
+}
+h2 {
+	margin: 100px auto 80px auto;
+	text-align: center;
+}
+
+table {
+	width: 1150px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+table tr {
+	line-height: 40px;
+}
+
+table tr th {
+	background-color: #8c8ce8;
+	color: white;
+	font-weight: normal;
+}
+table tr th, td {
+	border-collapse: collapse;
+	
+	/* border-right: 1px solid #dddddd; */
+}
+
+table td {
+	line-height: 50px;
+	font-size: 15px;
+}
+
+table tr th, td input {
+	font-weight: normal;
+	text-align: center;
+}
+
+input[type=text] {
+	width: 200px;
+	height: 30px;
+	font-size: 15px;
+	outline: none;
+}
+
+.buyBtn {
+	width: 215px;
+	height: 50px;
+	margin-top: 50px;
+	background-color: #8c8ce8;
+	color: black;
+	border: 1px solid #999999;
+	font-size: 16px;
+	color: white;
+	font-weight: bold;
+	cursor: pointer;
+}

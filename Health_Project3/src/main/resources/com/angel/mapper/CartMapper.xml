@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.angel.mapper.CartMapper">
+
+	<!-- 카트추가 -->
+	<insert id="addCart">
+		insert into cart(cart_num, memberId, pno, amount, product_name, product_price, product_discount, totalPrice, integerPrice)
+		values(cart_seq.nextval, #{memberId}, #{pno}, #{amount}, #{product_name}, #{product_price}, #{product_discount}, #{totalPrice}, #{integerPrice})
+	</insert>
+	
+	<!-- 카트 삭제 -->
+	<delete id="deleteCart">
+		delete from cart where cart_num = #{cart_num}
+	</delete>
+	
+	<!-- 카트 수량 수정 -->
+	<update id="modifyCount">
+		update cart set amount = #{amount} where cart_num = #{cart_num}
+	</update>
+	
+	<!-- 카트 목록 -->
+	<select id="getCart" resultType="com.angel.model.CartDTO">
+		select a.cart_num, a.memberId, a.pno, a.amount, a.product_name, a.product_price, a.product_discount, a.totalPrice, a.integerPrice, b.pno
+		from cart a left outer join product_tbl b on a.pno = b.pno
+		where memberId = #{memberId}
+	</select>
+	
+	<!-- 카트 확인 -->
+	<select id="checkCart" resultType="com.angel.model.CartDTO">
+		select * from cart where memberId = #{memberId} and pno = #{pno}
+	</select>
+	
+  </mapper>
+  
+  

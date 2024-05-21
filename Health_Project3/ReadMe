@@ -1,0 +1,22 @@
+create table member(
+memberId varchar2(50),
+memberPw varchar2(100) not null,
+memberName varchar2(30) not null,
+memberMail varchar2(100),
+memberAddr1 varchar2(100),
+memberAddr2 varchar2(100),
+memberAddr3 varchar2(100),
+adminCk number not null,
+regDate DATE not null,
+money number not null,
+point number not null,
+primary key(memberId)
+);
+
+commit;
+
+select * from member;
+
+select memberId,memberName,adminCk,money,point 
+from member 
+where memberId = '유미' and memberPw = '1234';

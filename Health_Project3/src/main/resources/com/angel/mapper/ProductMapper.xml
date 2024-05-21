@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.angel.mapper.ProductMapper">
+	<select id="selectAll" resultType="com.angel.model.ProductVO">
+
+		SELECT * FROM product_tbl
+		order by count desc
+
+
+
+	</select>
+
+	<select id="selectOne" resultType="com.angel.model.ProductVO">
+
+		select * from product_tbl
+		where pno=#{pno}
+	</select>
+
+	<select id="getToCategory"
+		resultType="com.angel.model.ProductVO">
+
+		select * from product_tbl where category=#{category}
+	</select>
+
+	<select id="selectWithPaging"
+		resultType="com.angel.model.ProductVO">
+		<![CDATA[
+			select * from ( select /*+INDEX_DESC(product_tbl pk_product)*/
+				rownum rn,pno ,product_num,name,category,img,tagContent,count,discount,detailExplain,detailExplain2,detailExplain3,detailImage,detailImage2,amount
+				from product_tbl where rownum<=(#{pageNum})*#{amount} and category=#{category})
+				where rn>(#{pageNum}-1)*#{amount}
+				]]>
+
+	</select>
+	<select id="getTotalCount" resultType="int">
+		select count(*) from product_tbl where pno > 0 and category=#{category}
+	
+	
+	</select>
+
+
+
+
+
+
+
+</mapper>

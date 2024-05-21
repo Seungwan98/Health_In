@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.angel.mapper.CrawlingMapper">
+
+	<insert id="insert" parameterType="java.util.List">
+	<selectKey resultType="int"  keyProperty="pno" order="BEFORE">
+
+    select nvl(max(pno)+1,0) from product_tbl 
+
+</selectKey>
+	
+	insert into product_tbl(pno,product_num,name,category,img,tagContent,count,price,country,discount,detailExplain,detailExplain2,detailExplain3,detailImage,detailImage2)
+	
+		<foreach collection="list" item="vo" separator="UNION ALL" index="index" >
+			
+		
+		select #{pno}+#{index}, #{vo.product_num},#{vo.name},#{vo.category},#{vo.img},#{vo.tagContent},#{vo.count},#{vo.price},#{vo.country},#{vo.discount},
+		#{vo.detailExplain},#{vo.detailExplain2},#{vo.detailExplain3},#{vo.detailImage},#{vo.detailImage2} from dual
+		</foreach>
+
+	</insert>
+
+	<delete id="deleteAll">
+		delete from product_tbl
+	</delete>
+
+
+
+</mapper>
